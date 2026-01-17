@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+    <title>Rajnish Rajan - Profile</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- Animated Background -->
+    <div class="animated-bg"></div>
+
+    <!-- Floating Particles -->
+    <div class="floating-particles" id="floatingParticles"></div>
+
+    <!-- Code Pattern -->
+    <div class="code-pattern"></div>
+
+    <!-- Mobile Menu Button -->
+    <button class="mobile-menu-btn" aria-label="Toggle Menu">
+        <i class="fas fa-bars"></i>
+    </button>
+
+    <!-- Success Modal -->
+    <div class="success-modal" id="successModal">
+        <div class="modal-content">
+            <div class="modal-icon">🚀</div>
+            <h3>Message Sent Successfully!</h3>
+            <p id="modalMessage">Thank you for reaching out! I'll get back to you within 24 hours.</p>
+            <button class="modal-btn" onclick="closeModal()">Close</button>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <div class="section-nav" id="sectionNav">
+        <button class="nav-btn active" data-target="home">
+            <i class="fas fa-home"></i> <span>Home</span>
+        </button>
+        <button class="nav-btn" data-target="about">
+            <i class="fas fa-user"></i> <span>About</span>
+        </button>
+        <button class="nav-btn" data-target="projects">
+            <i class="fas fa-code"></i> <span>Projects</span>
+        </button>
+        <button class="nav-btn" data-target="services">
+            <i class="fas fa-cogs"></i> <span>Services</span>
+        </button>
+        <button class="nav-btn" data-target="feedback">
+            <i class="fas fa-comments"></i> <span>Contact</span>
+        </button>
+    </div>
+
+    <div class="container">
+        <!-- Home Section -->
+        <header id="home" class="main-section active">
+            <div class="header-content">
+                <img src="my Photo.png" alt="Rajnish Rajan" class="profile-img">
+                <h1>Rajnish Rajan</h1>
+                <div class="subtitle">Computer Science Professional & Full Stack Developer</div>
+
+                <p style="max-width: 800px; margin: 20px auto; font-size: clamp(1rem, 2vw, 1.2rem); color: #cbd5e1;">
+                    Passionate software developer with expertise in modern web technologies,
+                    problem-solving, and creating efficient, scalable solutions.
+                    Dedicated to continuous learning and contributing to impactful projects.
+                </p>
+
+                <div class="social-links">
+                    <a href="https://www.linkedin.com/in/rajnish-rajan-306ba4339/" target="_blank" title="LinkedIn">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                    <a href="https://github.com" target="_blank" title="GitHub">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="https://www.instagram.com/rajnishrajan16/" target="_blank" title="Instagram">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="https://www.facebook.com/krajnishrajan/" target="_blank" title="Facebook">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                </div>
+
+                <div class="action-buttons">
+                    <button class="btn btn-primary" id="hireBtn">
+                        <i class="fas fa-briefcase"></i> Hire Me
+                    </button>
+                    <a href="./cv.pdf" download>
+                        <button class="btn btn-secondary" id="downloadCvBtn">
+                            <i class="fas fa-download"></i> Download My CV
+                        </button>
+                    </a>
+                </div>
+
+                <div class="location-badge">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <div>
+                        <h3 style="font-size: clamp(1rem, 2vw, 1.2rem); margin: 0;">Based in Delhi, India</h3>
+                        <p style="font-size: clamp(0.9rem, 1.8vw, 1rem); margin: 5px 0 0 0;">Open to remote positions
+                            worldwide</p>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <!-- About Section -->
+        <section id="about" class="main-section">
+            <div class="section-title">
+                <h2>About Me</h2>
+            </div>
+
+            <div class="about-content">
+                <div class="about-text">
+                    <h3>Hello, I'm Rajnish</h3>
+                    <p>
+                        I'm a passionate web developer who loves building modern, clean, and user-friendly websites. I
+                        enjoy turning ideas into real web experiences by combining creativity with logic and
+                        problem-solving.
+                    </p>
+                    <p>
+                        My journey started with curiosity about how websites work, and it slowly became a strong
+                        interest in development. I focus on writing clean code, creating responsive designs, and
+                        constantly improving my skills through new projects and learning.
+                    </p>
+                    <p>
+                        When I'm not coding, I explore new tools and technologies, upgrade my projects, and look for
+                        better ways to make the web faster, smoother, and more engaging.
+                    </p>
+
+                    <div class="skills-container" style="margin-top: 30px;">
+                        <div class="skill-item">
+                            <h4><i class="fas fa-code"></i> Languages</h4>
+                            <div>
+                                <span class="skill-tag">JavaScript</span>
+                                <span class="skill-tag">Python</span>
+                                <span class="skill-tag">Java</span>
+                                <span class="skill-tag">C++</span>
+                                <span class="skill-tag">SQL</span>
+                                <span class="skill-tag">HTML/CSS</span>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <h4><i class="fas fa-layer-group"></i> Frameworks</h4>
+                            <div>
+                                <span class="skill-tag">React</span>
+                                <span class="skill-tag">Node.js</span>
+                                <span class="skill-tag">Express</span>
+                                <span class="skill-tag">Django</span>
+                                <span class="skill-tag">Bootstrap</span>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <h4><i class="fas fa-database"></i> Databases</h4>
+                            <div>
+                                <span class="skill-tag">MySQL</span>
+                                <span class="skill-tag">MongoDB</span>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <h4><i class="fas fa-cloud"></i> Tools & Platforms</h4>
+                            <div>
+                                <span class="skill-tag">Git</span>
+                                <span class="skill-tag">GitHub</span>
+                                <span class="skill-tag">VS Code</span>
+                                <span class="skill-tag">AI Assisted Development</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div>
+                    <h3
+                        style="color: white; margin-bottom: clamp(15px, 3vw, 20px); font-size: clamp(1.5rem, 4vw, 2rem);">
+                        Education & Certifications</h3>
+
+                    <div class="education-item">
+                        <h4>Bachelor of Engineering in Computer Science</h4>
+                        <div class="date">Delhi Skill and Entrepreneurship University, 2023-2026</div>
+                        <p>Focus on Software Engineering and Web Technologies.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="main-section">
+            <div class="section-title">
+                <h2>My Projects</h2>
+            </div>
+
+            <div class="projects-grid">
+                <div class="project-card">
+                    <img src="expense.jpeg" alt="Expense Management System" class="project-img">
+                    <div class="project-content">
+                        <h3>Expense Management System</h3>
+                        <p>ExpenseMate is a daily expense management system that helps users track their spending and
+                            manage budgets efficiently. It also includes a split expense feature, allowing users to
+                            divide bills among friends, roommates, or groups and keep records of who owes whom.</p>
+
+                        <div class="project-tech">
+                            <span class="tech-tag">React</span>
+                            <span class="tech-tag">Node.js</span>
+                            <span class="tech-tag">MongoDB</span>
+                        </div>
+
+                        <div class="project-links">
+                            <a href="https://krajnishrajan.github.io/expense-tracker/" class="project-link" target="_blank">
+                                <i class="fas fa-external-link-alt"></i> Live Demo
+                            </a>
+                            <a href="https://github.com/krajnishrajan/expense-tracker.git" class="project-link" target="_blank">
+                                <i class="fab fa-github"></i> GitHub
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <img src="taj_Mahal.jpg" alt="The Taj Mahal: A Mausoleum of Love" class="project-img">
+                    <div class="project-content">
+                        <h3>The Taj Mahal: A Mausoleum of Love</h3>
+                        <p>A visually engaging and responsive tribute website dedicated to the Taj Mahal, highlighting
+                            its architectural beauty, historical importance, and construction journey. Includes modern
+                            UI design with animated effects and interactive image gallery.</p>
+
+                        <div class="project-tech">
+                            <span class="tech-tag">Vue.js</span>
+                            <span class="tech-tag">Express</span>
+                            <span class="tech-tag">JavaScript</span>
+                        </div>
+
+                        <div class="project-links">
+                            <a href="https://krajnishrajan.github.io/Taj-Mahal/" class="project-link" target="_blank">
+                                <i class="fas fa-external-link-alt"></i> Live Demo
+                            </a>
+                            <a href="https://github.com/krajnishrajan/Taj-Mahal" class="project-link" target="_blank">
+                                <i class="fab fa-github"></i> GitHub
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <img src="https://images.unsplash.com/photo-1555949963-aa79dcee981c?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80"
+                        alt="PG Management System" class="project-img">
+                    <div class="project-content">
+                        <h3>PG Management System</h3>
+                        <p>PG Management System is a Python-based desktop application built using Tkinter GUI and MySQL
+                            database to manage PG/hostel operations efficiently. Provides features like tenant and room
+                            management, rent tracking, and CRUD operations.</p>
+
+                        <div class="project-tech">
+                            <span class="tech-tag">Python</span>
+                            <span class="tech-tag">Tkinter</span>
+                            <span class="tech-tag">MySQL</span>
+                        </div>
+
+                        <div class="project-links">
+                            <a href="#" class="project-link" target="_blank">
+                                <i class="fas fa-external-link-alt"></i> Live Demo
+                            </a>
+                            <a href="#" class="project-link" target="_blank">
+                                <i class="fab fa-github"></i> GitHub
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Services Section -->
+        <section id="services" class="main-section">
+            <div class="section-title">
+                <h2>My Services</h2>
+            </div>
+
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-laptop-code"></i>
+                    </div>
+                    <h3>Web Development</h3>
+                    <p>Building responsive, modern websites and web applications using the latest technologies and best
+                        practices.</p>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-mobile-alt"></i>
+                    </div>
+                    <h3>Mobile App Development</h3>
+                    <p>Creating cross-platform mobile applications with React Native for iOS and Android devices.</p>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-database"></i>
+                    </div>
+                    <h3>Database Design</h3>
+                    <p>Designing efficient database schemas, optimizing queries, and ensuring data integrity and
+                        security.</p>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-cloud"></i>
+                    </div>
+                    <h3>Cloud Solutions</h3>
+                    <p>Deploying and managing applications on cloud platforms like AWS, Azure, and Google Cloud.</p>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-search"></i>
+                    </div>
+                    <h3>Technical Consulting</h3>
+                    <p>Providing expert advice on technology stack selection, architecture design, and development
+                        processes.</p>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-tools"></i>
+                    </div>
+                    <h3>Maintenance & Support</h3>
+                    <p>Offering ongoing maintenance, bug fixes, and feature enhancements for existing applications.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="feedback" class="main-section feedback-section">
+            <div class="section-title">
+                <h2>Contact Me</h2>
+            </div>
+
+            <div class="feedback-container">
+                <div class="feedback-message">
+                    <h3>Get In Touch</h3>
+                    <p>I'm currently open to full-time opportunities, freelance projects, and collaborations. Feel free
+                        to reach out with any questions or proposals.</p>
+                    <p>I typically respond within 24 hours and am available for meetings Monday-Friday, 9AM-6PM IST.</p>
+
+                    <div
+                        style="margin-top: 30px; padding: 20px; background: rgba(30, 41, 59, 0.5); border-radius: 10px;">
+                        <div style="display: flex; align-items: center; margin-bottom: 15px;">
+                            <i class="fas fa-map-marker-alt"
+                                style="color: var(--accent-color); margin-right: 15px; font-size: 1.5rem;"></i>
+                            <div>
+                                <h4 style="color: white; margin-bottom: 5px;">Location</h4>
+                                <p style="color: #cbd5e1;">Uttam Nagar, New Delhi, India</p>
+                            </div>
+                        </div>
+
+                        <div style="display: flex; align-items: center; margin-bottom: 15px;">
+                            <i class="fas fa-envelope"
+                                style="color: var(--accent-color); margin-right: 15px; font-size: 1.5rem;"></i>
+                            <div>
+                                <h4 style="color: white; margin-bottom: 5px;">Email</h4>
+                                <p style="color: #cbd5e1;">krajnishrajan@gmail.com</p>
+                            </div>
+                        </div>
+
+                        <div style="display: flex; align-items: center;">
+                            <i class="fas fa-phone"
+                                style="color: var(--accent-color); margin-right: 15px; font-size: 1.5rem;"></i>
+                            <div>
+                                <h4 style="color: white; margin-bottom: 5px;">Phone</h4>
+                                <p style="color: #cbd5e1;">+91 98219 90310</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="social-links" style="justify-content: flex-start; margin-top: 30px;">
+                        <a href="https://www.linkedin.com/in/rajnish-rajan-306ba4339/" target="_blank" title="LinkedIn">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a href="https://github.com" target="_blank" title="GitHub">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a href="https://www.instagram.com/rajnishrajan16/" target="_blank" title="Instagram">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="https://www.facebook.com/krajnishrajan/" target="_blank" title="Facebook">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="feedback-form">
+                    <h3 style="color: var(--accent-color); margin-bottom: 30px; text-align: center;">Send a Message</h3>
+
+                    <form id="commentForm">
+                        <div class="form-group">
+                            <label for="commentType">Purpose of Contact</label>
+                            <select id="commentType" required>
+                                <option value="" disabled selected>Select an option</option>
+                                <option value="hire">Hiring Inquiry</option>
+                                <option value="project">Project Proposal</option>
+                                <option value="collab">Collaboration</option>
+                                <option value="question">Technical Question</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="name">Your Name</label>
+                            <input type="text" id="name" placeholder="Enter your name" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email">Your Email</label>
+                            <input type="email" id="email" placeholder="Enter your email" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="review">Your Message</label>
+                            <textarea id="review" rows="5" placeholder="Enter your message" required></textarea>
+                        </div>
+
+                        <button type="button" class="submit-btn" onclick="sendReview()">
+                            <i class="fas fa-paper-plane"></i> Send Message
+                        </button>
+
+                        <p id="status"></p>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer>
+            <div class="closing-message">
+                "Code is like humor. When you have to explain it, it's bad." - Cory House
+            </div>
+
+            <div class="social-links">
+                <a href="https://www.linkedin.com/in/rajnish-rajan-306ba4339/" target="_blank" title="LinkedIn">
+                    <i class="fab fa-linkedin-in"></i>
+                </a>
+                <a href="https://github.com" target="_blank" title="GitHub">
+                    <i class="fab fa-github"></i>
+                </a>
+                <a href="https://www.instagram.com/rajnishrajan16/" target="_blank" title="Instagram">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a href="https://www.facebook.com/krajnishrajan/" target="_blank" title="Facebook">
+                    <i class="fab fa-facebook-f"></i>
+                </a>
+            </div>
+
+            <div class="signature">Rajnish Rajan</div>
+            <p style="margin-top: 20px; color: rgba(255,255,255,0.7);">© 2026 All Rights Reserved</p>
+        </footer>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
