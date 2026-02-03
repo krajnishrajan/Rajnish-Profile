@@ -74,19 +74,19 @@ navButtons.forEach(button => {
 });
 
 // Mobile Menu Toggle
-mobileMenuBtn.addEventListener('click', function () {
-    sectionNav.classList.toggle('mobile-open');
-    this.innerHTML = sectionNav.classList.contains('mobile-open')
-        ? '<i class="fas fa-times"></i>'
-        : '<i class="fas fa-bars"></i>';
+// mobileMenuBtn.addEventListener('click', function () {
+//     sectionNav.classList.toggle('mobile-open');
+//     this.innerHTML = sectionNav.classList.contains('mobile-open')
+//         ? '<i class="fas fa-times"></i>'
+//         : '<i class="fas fa-bars"></i>';
 
-    // Toggle body scroll
-    if (sectionNav.classList.contains('mobile-open')) {
-        document.body.style.overflow = 'hidden';
-    } else {
-        document.body.style.overflow = 'auto';
-    }
-});
+//     // Toggle body scroll
+//     if (sectionNav.classList.contains('mobile-open')) {
+//         document.body.style.overflow = 'hidden';
+//     } else {
+//         document.body.style.overflow = 'auto';
+//     }
+// });
 
 // Close mobile menu when clicking outside
 document.addEventListener('click', function (event) {
@@ -114,11 +114,23 @@ function handleResize() {
 
 // Hire Me Button
 document.getElementById('hireBtn').addEventListener('click', function () {
-    switchSection('feedback');
+    const feedbackSection = document.getElementById('feedback');
+    const feedbackBtn = document.querySelector('[data-target="feedback"]');
+
+    navButtons.forEach(btn => btn.classList.remove('active'));
+    feedbackBtn.classList.add('active');
+
+    sections.forEach(section => {
+        section.classList.remove('active');
+        if (section.id === 'feedback') {
+            section.classList.add('active');
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+    });
 
     setTimeout(() => {
         document.getElementById('commentType').value = "hire";
-        document.getElementById('name').focus();
+        document.getElementById('commentType').focus();
     }, 500);
 });
 
